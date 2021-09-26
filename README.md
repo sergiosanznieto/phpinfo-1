@@ -24,9 +24,9 @@ git pull
 BUILD THE DOCKER IMAGE
 ```
 mkdir /build-context/
-docker build --filename Dockerfile --tag academiaonline/phpinfo:latest /build-context/
+docker build --file Dockerfile --tag academiaonline/phpinfo:latest /build-context/
 ```
 (ALTERNATIVE WAY) BUILD THE DOCKER IMAGE USING DOCKERIGNORE
 ```
-docker build --filename Dockerfile --tag academiaonline/phpinfo:latest .
+docker build --file Dockerfile --tag academiaonline/phpinfo:latest .
 ```
