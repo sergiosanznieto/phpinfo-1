@@ -19,6 +19,7 @@ curl localhost:8080/src/index.php
 CHECKOUT THE BRANCH WITH THE CONTAINERIZED APPLICATION
 ```
 git checkout 2021-10
+git pull
 ```
 BUILD THE DOCKER IMAGE
 ```
