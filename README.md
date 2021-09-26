@@ -32,5 +32,5 @@ docker build --file Dockerfile --tag academiaonline/phpinfo:latest .
 ```
 RUN THE CONTAINER CREATING A (HOST BIND) VOLUME TO INCLUDE THE ARTIFACT (NOT INCLUDED INSIDE THE IMAGE)
 ```
-docker run --volume ./src/index.php:/src/index.php academiaonline/phpinfo:latest -f src/index.php -S 0.0.0.0:8080
+docker run --volume ${PWD}/src/index.php:/src/index.php academiaonline/phpinfo:latest -f src/index.php -S 0.0.0.0:8080
 ```
