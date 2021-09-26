@@ -3,3 +3,6 @@ RUN apk add php
 
 FROM scratch
 COPY --from=0 / /
+
+ENTRYPOINT ["/usr/bin/php"]
+CMD ["-v"]
