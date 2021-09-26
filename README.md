@@ -15,3 +15,13 @@ TEST THE RUNNING APPLICATION (AFTER INSTALLING CURL IN YOUR SYSTEM)
 ```
 curl localhost:8080/src/index.php
 ```
+## MODERN DEPLOYMENT (WITH CONTAINERS)
+CHECKOUT THE BRANCH WITH THE CONTAINERIZED APPLICATION
+```
+git checkout 2021-10
+```
+BUILD THE DOCKER IMAGE
+```
+mkdir /build-context/
+docker build --filename Dockerfile --tag academiaonline/phpinfo:latest /build-context/
+```
