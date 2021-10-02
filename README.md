@@ -37,7 +37,15 @@ PHP_PORT=8080
 CONTAINER_ID=$( docker run --detach --publish ${PHP_PORT} --volume ${PWD}/src/index.php:/src/index.php:ro academiaonline/phpinfo:latest -f src/index.php -S ${PHP_HOST}:${PHP_PORT} )
 curl --head http://localhost:$( docker port ${CONTAINER_ID} | cut --delimiter : --field 2 )/src/index.php
 ```
-RUN THE CONTAINER CREATING A DOCKER VOLUME TO INCLUDE THE ARTIFACT (NOT INCLUDED INSIDE THE IMAGE) (WE WILL NEED A SECOND CONTAINER TO DOWNLOAD THE ARTIFACT)
+USEFUL COMMANDS TO CHECK THE LOGS AND STATUS OF THE RUNNING CONTAINER:
+```
+docker logs ${CONTAINER_ID}
+docker top ${CONTAINER_ID}
+docker stats --no-stream ${CONTAINER_ID}
+docker port ${CONTAINER_ID}
+docker inspect ${CONTAINER_ID}
+```
+(ALTERNATIVE WAY) RUN THE CONTAINER CREATING A DOCKER VOLUME TO INCLUDE THE ARTIFACT (NOT INCLUDED INSIDE THE IMAGE) (WE WILL NEED A SECOND CONTAINER TO DOWNLOAD THE ARTIFACT)
 ```
 VOLUME=phpinfo
 
