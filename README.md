@@ -3,7 +3,7 @@
 DOWNLOAD GITHUB REPOSITORY
 ```
 git clone https://github.com/academiaonline/phpinfo
-cd phpinfo
+cd phpinfo/
 git checkout main
 ```
 ## TRADITIONAL DEPLOYMENT (WITHOUT CONTAINERS)
