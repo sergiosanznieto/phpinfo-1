@@ -1,0 +1,25 @@
+# git clone https://github.com/academiaonline/phpinfo
+# cd phpinfo/
+# git checkout 2021-10
+# git pull
+# docker build --file Dockerfile --tag academiaonline/phpinfo:latest .
+# docker login
+# docker push academiaonline/phpinfo:latest
+# docker run --detach --publish 8080 --volume ${PWD}/src/index.php:/src/index.php:ro academiaonline/phpinfo:latest -f src/index.php -S 0.0.0.0:8080
+
+configs:
+  phpinfo:
+    file: ./src/index.php
+services:
+  phpinfo:
+    image: academiaonline/phpinfo:latest
+    ports:
+      - 8080
+    command:
+      - -f
+      - src/index.php
+      - -S
+      - 0.0.0.0:8080
+    configs:
+      - phpinfo
+    
