@@ -2,10 +2,10 @@
 # cd phpinfo/
 # git checkout 2021-10
 # git pull
-# docker build --file Dockerfile --tag academiaonline/phpinfo:latest .
+# docker build --file Dockerfile --tag academiaonline/phpinfo:2021-10 .
 # docker login
-# docker push academiaonline/phpinfo:latest
-# docker run --detach --name phpinfo --publish 8080 --volume ${PWD}/src/index.php:/src/index.php:ro academiaonline/phpinfo:latest -f src/index.php -S 0.0.0.0:8080
+# docker push academiaonline/phpinfo:2021-10
+# docker run --detach --name phpinfo --publish 8080 --volume ${PWD}/src/index.php:/src/index.php:ro academiaonline/phpinfo:2021-10 -f src/index.php -S 0.0.0.0:8080
 # docker swarm init
 # docker stack deploy --compose-file docker-compose.yaml PHPINFO
 # docker stack ls
