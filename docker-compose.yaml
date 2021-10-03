@@ -12,9 +12,6 @@ configs:
     file: ./src/index.php
 services:
   phpinfo:
-    image: academiaonline/phpinfo:latest
-    ports:
-      - 8080
     command:
       - -f
       - src/index.php
@@ -25,3 +22,6 @@ services:
         mode: 0400
         source: phpinfo
         target: /src/index.php  
+    image: academiaonline/phpinfo:latest
+    ports:
+      - 8080
