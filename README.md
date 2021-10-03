@@ -30,6 +30,11 @@ docker build --file Dockerfile --tag academiaonline/phpinfo:latest /build-contex
 ```
 docker build --file Dockerfile --tag academiaonline/phpinfo:latest .
 ```
+PUSH THE DOCKER IMAGE TO THE DOCKER REGISTRY
+```
+docker login
+docker push academiaonline/phpinfo:latest
+```
 RUN THE CONTAINER CREATING A (HOST BIND) VOLUME TO INCLUDE THE ARTIFACT (NOT INCLUDED INSIDE THE IMAGE) (POSSIBLE USECASE: YOUR LAPTOP / SHARED FILESYSTEM LIKE NFS)
 ```
 PHP_HOST=0.0.0.0
