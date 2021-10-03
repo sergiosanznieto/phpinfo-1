@@ -23,6 +23,6 @@ services:
     configs:
       - 
         source: phpinfo
-        target: src/index.php
+        target: /src/index.php
         mode: 0400
     
