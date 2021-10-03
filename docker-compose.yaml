@@ -5,7 +5,7 @@
 # docker build --file Dockerfile --tag academiaonline/phpinfo:latest .
 # docker login
 # docker push academiaonline/phpinfo:latest
-# docker run --detach --publish 8080 --volume ${PWD}/src/index.php:/src/index.php:ro academiaonline/phpinfo:latest -f src/index.php -S 0.0.0.0:8080
+# docker run --detach --name phpinfo --publish 8080 --volume ${PWD}/src/index.php:/src/index.php:ro academiaonline/phpinfo:latest -f src/index.php -S 0.0.0.0:8080
 
 configs:
   phpinfo:
