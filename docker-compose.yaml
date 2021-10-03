@@ -25,3 +25,4 @@ services:
     image: academiaonline/phpinfo:latest
     ports:
       - 8080
+version: '3.8'
