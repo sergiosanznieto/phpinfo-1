@@ -10,6 +10,7 @@
 # docker stack deploy --compose-file docker-compose.yaml PHPINFO
 # docker stack ls
 # docker stack services PHPINFO
+# docker stack ps PHPINFO
 # curl localhost:$( docker stack services PHPINFO | awk --field-separator '->' /PHPINFO/'{ print $1 }' | cut --delimiter : --field 3 )/src/index.php
 
 configs:
