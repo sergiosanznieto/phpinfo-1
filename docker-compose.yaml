@@ -27,7 +27,11 @@ services:
       - 
         mode: 0400
         source: phpinfo
-        target: /src/index.php  
+        target: /src/index.php
+    deploy:
+      placement:
+        constraints:
+          - node.role == worker     
     image: academiaonline/phpinfo:latest
     ports:
       - 8080
