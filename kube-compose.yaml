@@ -1,3 +1,12 @@
+# git clone https://github.com/academiaonline/phpinfo
+# cd phpinfo/
+# git checkout 2021-10
+# kubectl create ns phpinfo
+# kubectl create cm phpinfo-cm --from-file ./src/index.php --namespace phpinfo
+# kubectl apply --filename kube-compose.yaml --namespace phpinfo
+# kubectl get all --namespace phpinfo
+# kubectl logs phpinfo-po --namespace phpinfo
+
 apiVersion: v1
 kind: Pod
 metadata:
