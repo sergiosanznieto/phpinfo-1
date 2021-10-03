@@ -21,5 +21,8 @@ services:
       - -S
       - 0.0.0.0:8080
     configs:
-      - phpinfo
+      - 
+        source: phpinfo
+        target: src/index.php
+        mode: 0400
     
