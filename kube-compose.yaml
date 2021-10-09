@@ -6,6 +6,9 @@
 # kubectl apply --filename kube-compose.yaml --namespace phpinfo
 # kubectl get all --namespace phpinfo
 # kubectl logs phpinfo-po --namespace phpinfo
+# kubectl --namespace phpinfo exec pod/phpinfo-po -- wget --spider -q -S http://phpinfo-svc/src/index.php
+# kubectl --namespace phpinfo exec pod/phpinfo-po -- nslookup phpinfo-svc
+# kubectl --namespace phpinfo exec pod/phpinfo-po -- nslookup phpinfo-svc.phpinfo.svc.cluster.local
 
 apiVersion: v1
 kind: Pod
@@ -63,6 +66,11 @@ spec:
     version: 2021-10
   type: ClusterIP
   
+---
 
+apiVersion:
+kind:
+metadata:
+spec:
             
   
