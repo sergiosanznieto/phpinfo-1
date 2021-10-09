@@ -4,7 +4,7 @@
 # kubectl create ns phpinfo
 # kubectl create cm phpinfo-cm --from-file ./src/index.php --namespace phpinfo
 # kubectl apply --filename kube-compose.yaml --namespace phpinfo
-# kubectl get all --namespace phpinfo
+# kubectl get all --namespace phpinfo --output wide
 # kubectl logs phpinfo-po --namespace phpinfo
 # kubectl --namespace phpinfo exec pod/phpinfo-po -- wget --spider -q -S http://phpinfo-svc/src/index.php
 # kubectl --namespace phpinfo exec pod/phpinfo-po -- nslookup phpinfo-svc
