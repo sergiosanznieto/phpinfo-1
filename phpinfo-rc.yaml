@@ -25,11 +25,11 @@ spec:
           env: 
             - 
               name: author
-              value: Josemiguel
+              value: Sergio
             - 
               name: JAVA_HOME
               value: /var/lib/java
-          image: manyogil/phpinfo:santander-optimizado
+          image: sergiosanz/phpinfo:santander
           name: phpinfo-container
           ports: 
             -  
